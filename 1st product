@@ -1,0 +1,118 @@
+using System;
+
+namespace Switch_Final_Product
+{
+    class Program
+    {
+        //this project will try to use both public static, switch, and consolestatus to key to create a 3 number calculator
+        public static float addition(float num1, float num2)
+        {
+            float num12 = num1 + num2;
+            return num12;
+        }
+        public static float addition2(float num12, float num3)
+        {
+            float numF = num12 + num3;
+            return numF;
+        }
+        public static float subtraction(float num1, float num2)
+        {
+            float num12 = num1 - num2;
+            return num12;
+        }
+        public static float subtraction2(float num12, float num3)
+        {
+            float numF = num12 - num3;
+            return numF;
+        }
+        public static float multiplication(float num1, float num2)
+        {
+            float num12 = num1 * num2;
+            return num12;
+        }
+        public static float multiplication2(float num12, float num3)
+        {
+            float numF = num12 * num3;
+            return numF;
+        }
+        public static float division(float num1, float num2)
+        {
+            float num12 = num1 / num2;
+            return num12;
+        }
+        public static float division2(float num12, float num3)
+        {
+            float numF = num12 / num3;
+            return numF;
+        }
+        static void Main(string[] args)
+        {
+            ConsoleKeyInfo status;
+            Console.WriteLine("press enter to start");
+            Console.ReadKey();
+            Console.Write("enter first number: ");
+            float num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter second number: ");
+            float num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter the third number: ");
+            float num3 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter first operand(+, -, *, /): ");
+            string act1 = Convert.ToString(Console.ReadLine());
+            Console.Write("enter second operand(+, -, *, /): ");
+            string act2 = Convert.ToString(Console.ReadLine());
+            float num12 = 0;
+            float numF = 0;
+            switch(act1)
+            {
+                case "+":
+                    num12 = addition(num1, num2);
+                    break;
+                case "-":
+                    num12 = subtraction(num1, num2);
+                    break;
+                case "*":
+                    num12 = multiplication(num1, num2);
+                    break;
+                case "/":
+                    num12 = division(num1, num2);
+                    break;
+                default:
+                    Console.WriteLine("wrong input");
+                    break;
+            }
+            switch(act2)
+            {
+                case "+":
+                    numF = addition2(num12, num3);
+                    break;
+                case "-":
+                    numF = subtraction2(num12, num3);
+                    break;
+                case "*":
+                    numF = multiplication2(num12, num3);
+                    break;
+                case "/":
+                    numF = division2(num12, num3);
+                    break;
+                default:
+                    Console.WriteLine("wrong input");
+                    break;
+            }
+            if (numF != 0)
+            {
+                Console.WriteLine("the answer is " + numF.ToString());
+                Console.WriteLine("Do you want to break Y/y");
+            }
+            else
+            {
+                Console.WriteLine("the answer is either 0 or a wrong input happened");
+                Console.WriteLine("do you want to break Y/y");
+            }
+            status = Console.ReadKey();
+            if (status.Key == ConsoleKey.Y)
+            {
+                Console.Clear();
+            }
+        }
+    }
+}
