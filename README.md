@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Rynz0
-- 👀 I’m interested in improving
-- 🌱 I’m currently learning switches
+- 👀 I’m interested in making my program run faster
+- 🌱 I’m currently learning javascript
 - 💞️ I’m looking to collaborate on nothing right now sorry
 - 📫 How to reach me 
 
